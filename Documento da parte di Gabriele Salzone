@@ -1,0 +1,48 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int scelta;
+        System.out.println("Scegli quale errore generare:\n" +
+                "1) Arithmetic Exception\n" +
+                "2) Null Pointer Exception\n" +
+                "3) Class Cascade Exception\n" +
+                "4) Array Index out of bound Exception\n" +
+                "5) String Index out of bound Exception\n" +
+                "6) Number format Exception \n" +
+                "7) Uscita dal programma");
+        scelta = sc.nextInt();
+        switch (scelta) {
+            case 1:
+                System.out.println("Inserire un numero:");
+                int f = sc.nextInt();
+                System.out.println(f/0);
+                break;
+            case 2:
+                String s = null;
+                System.out.println(s.charAt(0));
+                break;
+            case 3:
+                System.out.println("Inserire un numero:");
+                int g = sc.nextInt();
+                int[] r = new int[g];
+                break;
+            case 4:
+                int[] array = new int[2];
+                System.out.println(array[2]);
+                break;
+            case 5:
+                String t = "ciao";
+                System.out.println(t.charAt(4));
+                break;
+            case 6:
+                int w = Integer.valueOf("123456789987654321");
+                break;
+            case 7:
+                System.out.println("Uscita dal programma completata al 100%");
+                break;
+            default:
+                System.out.println("Input non valido");
+        }
+    }
+}
